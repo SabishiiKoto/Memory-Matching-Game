@@ -1,7 +1,7 @@
 ## Project Title
 A GUI memory matching game.
 
-## Feature
+## Features
 - Allow player to pick levels.
 - Generate games.
 
