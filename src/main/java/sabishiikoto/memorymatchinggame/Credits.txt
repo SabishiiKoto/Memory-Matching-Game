@@ -1,0 +1,130 @@
+Images Credit List:
+Group 1: Animals
+Hippopotamus: <a href="https://www.flaticon.com/free-icons/animals" title="animals icons">Animals icons created by Freepik - Flaticon</a>
+Penguin
+Panda
+Camel
+Crab
+Fish
+Bird
+Ladybug
+Deer
+Sheep
+
+Group 2: Fruits
+Coconut: <a href="https://www.flaticon.com/free-icons/coconut" title="coconut icons">Coconut icons created by Freepik - Flaticon</a>
+Blueberry: <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Freepik - Flaticon</a>
+Watermelon: <a href="https://www.flaticon.com/free-icons/watermelon" title="watermelon icons">Watermelon icons created by Freepik - Flaticon</a>
+Strawberry: <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Freepik - Flaticon</a>
+Banana: <a href="https://www.flaticon.com/free-icons/banana" title="banana icons">Banana icons created by Freepik - Flaticon</a>
+Pineapple: <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Freepik - Flaticon</a>
+Mango: <a href="https://www.flaticon.com/free-icons/mango" title="mango icons">Mango icons created by Freepik - Flaticon</a>
+Peach: <a href="https://www.flaticon.com/free-icons/peach" title="peach icons">Peach icons created by Freepik - Flaticon</a>
+Pomegranate: <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Freepik - Flaticon</a>
+Orange: <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Freepik - Flaticon</a>
+
+Group 3: Food
+Chicken Thigh: <a href="https://www.flaticon.com/free-icons/chicken-thigh" title="chicken-thigh icons">Chicken-thigh icons created by Ghozi Muhtarom - Flaticon</a>
+Burger: <a href="https://www.flaticon.com/free-icons/fast-food" title="fast-food icons">Fast-food icons created by Ghozi Muhtarom - Flaticon</a>
+Egg: <a href="https://www.flaticon.com/free-icons/omelette" title="omelette icons">Omelette icons created by Ghozi Muhtarom - Flaticon</a>
+Hotdog: <a href="https://www.flaticon.com/free-icons/fast-food" title="fast-food icons">Fast-food icons created by Ghozi Muhtarom - Flaticon</a>
+Pizza: <a href="https://www.flaticon.com/free-icons/fast-food" title="fast-food icons">Fast-food icons created by Ghozi Muhtarom - Flaticon</a>
+Sandwich: <a href="https://www.flaticon.com/free-icons/bread" title="bread icons">Bread icons created by Ghozi Muhtarom - Flaticon</a>
+Cupcake: <a href="https://www.flaticon.com/free-icons/food-and-restaurant" title="food-and-restaurant icons">Food-and-restaurant icons created by Ghozi Muhtarom - Flaticon</a>
+Donut: <a href="https://www.flaticon.com/free-icons/doughnut" title="doughnut icons">Doughnut icons created by Ghozi Muhtarom - Flaticon</a>
+Bread: <a href="https://www.flaticon.com/free-icons/bread" title="bread icons">Bread icons created by Ghozi Muhtarom - Flaticon</a>
+Fries: <a href="https://www.flaticon.com/free-icons/fast-food" title="fast-food icons">Fast-food icons created by Ghozi Muhtarom - Flaticon</a>
+
+Group 4: Christmas
+Wreath: <a href="https://www.flaticon.com/free-icons/christmas-garland" title="christmas garland icons">Christmas garland icons created by microstd - Flaticon</a>
+Sock: <a href="https://www.flaticon.com/free-icons/christmas-sock" title="christmas sock icons">Christmas sock icons created by microstd - Flaticon</a>
+Bell: <a href="https://www.flaticon.com/free-icons/christmas-bell" title="christmas bell icons">Christmas bell icons created by microstd - Flaticon</a>
+Card: <a href="https://www.flaticon.com/free-icons/christmas-card" title="christmas card icons">Christmas card icons created by microstd - Flaticon</a>
+Gingerbread: <a href="https://www.flaticon.com/free-icons/gingerbread-man" title="gingerbread man icons">Gingerbread man icons created by microstd - Flaticon</a>
+Candy cane: <a href="https://www.flaticon.com/free-icons/candy-cane" title="candy cane icons">Candy cane icons created by microstd - Flaticon</a>
+Mistletoe: <a href="https://www.flaticon.com/free-icons/christmas" title="christmas icons">Christmas icons created by microstd - Flaticon</a>
+Christmas Tree: <a href="https://www.flaticon.com/free-icons/christmas-tree" title="christmas tree icons">Christmas tree icons created by microstd - Flaticon</a>
+Fireplace: <a href="https://www.flaticon.com/free-icons/chistmas" title="chistmas icons">Chistmas icons created by microstd - Flaticon</a>
+Snow Globe: <a href="https://www.flaticon.com/free-icons/christmas" title="christmas icons">Christmas icons created by microstd - Flaticon</a>
+
+Group 5: Education
+Backpack: <a href="https://www.flaticon.com/free-icons/backpack" title="backpack icons">Backpack icons created by Freepik - Flaticon</a>
+Telescope: <a href="https://www.flaticon.com/free-icons/telescope" title="telescope icons">Telescope icons created by Freepik - Flaticon</a>
+Calculator: <a href="https://www.flaticon.com/free-icons/calculator" title="calculator icons">Calculator icons created by Freepik - Flaticon</a>
+Books: <a href="https://www.flaticon.com/free-icons/book" title="book icons">Book icons created by Freepik - Flaticon</a>
+Microscope: <a href="https://www.flaticon.com/free-icons/microscope" title="microscope icons">Microscope icons created by Freepik - Flaticon</a>
+Color Palette: <a href="https://www.flaticon.com/free-icons/subject" title="subject icons">Subject icons created by Freepik - Flaticon</a>
+Compass: <a href="https://www.flaticon.com/free-icons/drawing-compass" title="drawing-compass icons">Drawing-compass icons created by Freepik - Flaticon</a>
+School Bus: <a href="https://www.flaticon.com/free-icons/school-bus" title="school-bus icons">School-bus icons created by Freepik - Flaticon</a>
+Graduation cap: <a href="https://www.flaticon.com/free-icons/university" title="university icons">University icons created by Freepik - Flaticon</a>
+Geography: <a href="https://www.flaticon.com/free-icons/social-studies" title="social-studies icons">Social-studies icons created by Freepik - Flaticon</a>
+
+Group 6: Nature/Weather
+Rainbow: <a href="https://www.flaticon.com/free-icons/rainbow" title="rainbow icons">Rainbow icons created by Freepik - Flaticon</a>
+Earth: <a href="https://www.flaticon.com/free-icons/globe" title="globe icons">Globe icons created by Freepik - Flaticon</a>
+Volcano: <a href="https://www.flaticon.com/free-icons/natural-disaster" title="natural-disaster icons">Natural-disaster icons created by Freepik - Flaticon</a>
+Flower: <a href="https://www.flaticon.com/free-icons/sunflower" title="sunflower icons">Sunflower icons created by Freepik - Flaticon</a>
+Leaf: <a href="https://www.flaticon.com/free-icons/leaves" title="leaves icons">Leaves icons created by Freepik - Flaticon</a>
+Sun: <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
+Acorn: <a href="https://www.flaticon.com/free-icons/acorn" title="acorn icons">Acorn icons created by Freepik - Flaticon</a>
+Cactus: <a href="https://www.flaticon.com/free-icons/cactus" title="cactus icons">Cactus icons created by Freepik - Flaticon</a>
+Mountain: <a href="https://www.flaticon.com/free-icons/nature" title="nature icons">Nature icons created by Freepik - Flaticon</a>
+Wood: <a href="https://www.flaticon.com/free-icons/wood" title="wood icons">Wood icons created by Freepik - Flaticon</a>
+
+Group 7: Halloween
+Broom: <a href="https://www.flaticon.com/free-icons/broom" title="broom icons">Broom icons created by Freepik - Flaticon</a>
+Candy Corn: <a href="https://www.flaticon.com/free-icons/candy" title="candy icons">Candy icons created by Freepik - Flaticon</a>
+Wizard Hat: <a href="https://www.flaticon.com/free-icons/wizard" title="wizard icons">Wizard icons created by Freepik - Flaticon</a>
+Black Cat: <a href="https://www.flaticon.com/free-icons/black-cat" title="black cat icons">Black cat icons created by Freepik - Flaticon</a>
+Toad: <a href="https://www.flaticon.com/free-icons/toad" title="toad icons">Toad icons created by Freepik - Flaticon</a>
+Death: <a href="https://www.flaticon.com/free-icons/character" title="character icons">Character icons created by Freepik - Flaticon</a>
+Cauldron: <a href="https://www.flaticon.com/free-icons/witch" title="witch icons">Witch icons created by Freepik - Flaticon</a>
+Coffin: <a href="https://www.flaticon.com/free-icons/coffin" title="coffin icons">Coffin icons created by Freepik - Flaticon</a>
+Poison: <a href="https://www.flaticon.com/free-icons/poison" title="poison icons">Poison icons created by Freepik - Flaticon</a>
+Cnady: <a href="https://www.flaticon.com/free-icons/dessert" title="dessert icons">Dessert icons created by Freepik - Flaticon</a>
+
+Group 8: Farming
+Mushroom: <a href="https://www.flaticon.com/free-icons/mushroom" title="mushroom icons">Mushroom icons created by Freepik - Flaticon</a>
+Corn: <a href="https://www.flaticon.com/free-icons/agriculture" title="agriculture icons">Agriculture icons created by Freepik - Flaticon</a>
+Tomato: <a href="https://www.flaticon.com/free-icons/tomato" title="tomato icons">Tomato icons created by Freepik - Flaticon</a>
+Carrot: <a href="https://www.flaticon.com/free-icons/carrot" title="carrot icons">Carrot icons created by Freepik - Flaticon</a>
+Garlic: <a href="https://www.flaticon.com/free-icons/garlic" title="garlic icons">Garlic icons created by Freepik - Flaticon</a>
+Potato: <a href="https://www.flaticon.com/free-icons/potato" title="potato icons">Potato icons created by Freepik - Flaticon</a>
+Sweet Potato: <a href="https://www.flaticon.com/free-icons/sweet-potato" title="sweet-potato icons">Sweet-potato icons created by Freepik - Flaticon</a>
+Wheat: <a href="https://www.flaticon.com/free-icons/plantation" title="plantation icons">Plantation icons created by Freepik - Flaticon</a>
+Rice: <a href="https://www.flaticon.com/free-icons/rice" title="rice icons">Rice icons created by Freepik - Flaticon</a>
+Radish: <a href="https://www.flaticon.com/free-icons/turnip" title="turnip icons">Turnip icons created by Freepik - Flaticon</a>
+
+Group 9: Activities
+Badminton: <a href="https://www.flaticon.com/free-icons/badminton" title="badminton icons">Badminton icons created by Freepik - Flaticon</a>
+Roller Skate: <a href="https://www.flaticon.com/free-icons/roller-skate" title="roller-skate icons">Roller-skate icons created by Freepik - Flaticon</a>
+Kite: <a href="https://www.flaticon.com/free-icons/leisure" title="leisure icons">Leisure icons created by Freepik - Flaticon</a>
+Ping Pong: <a href="https://www.flaticon.com/free-icons/sports-and-competition" title="sports-and-competition icons">Sports-and-competition icons created by Freepik - Flaticon</a>
+Basketball: <a href="https://www.flaticon.com/free-icons/basketball" title="basketball icons">Basketball icons created by Freepik - Flaticon</a>
+Puzzle: <a href="https://www.flaticon.com/free-icons/puzzle" title="puzzle icons">Puzzle icons created by Freepik - Flaticon</a>
+Robot: <a href="https://www.flaticon.com/free-icons/robot" title="robot icons">Robot icons created by Freepik - Flaticon</a>
+Music: <a href="https://www.flaticon.com/free-icons/orchestra" title="orchestra icons">Orchestra icons created by Freepik - Flaticon</a>
+Drawing: <a href="https://www.flaticon.com/free-icons/children" title="children icons">Children icons created by Freepik - Flaticon</a>
+Exercise: <a href="https://www.flaticon.com/free-icons/monkey-bars" title="monkey-bars icons">Monkey-bars icons created by Freepik - Flaticon</a>
+
+Group 10: Drinks
+Bear BT: <a href="https://www.flaticon.com/free-icons/bubble-tea" title="bubble tea icons">Bubble tea icons created by Freepik - Flaticon</a>
+Smoothie: <a href="https://www.flaticon.com/free-icons/boba" title="boba icons">Boba icons created by Freepik - Flaticon</a>
+Brown BT: <a href="https://www.flaticon.com/free-icons/boba" title="boba icons">Boba icons created by Freepik - Flaticon</a>
+Watermelon BT: <a href="https://www.flaticon.com/free-icons/boba" title="boba icons">Boba icons created by Freepik - Flaticon</a>
+Black BT: <a href="https://www.flaticon.com/free-icons/bubble-tea" title="bubble tea icons">Bubble tea icons created by Freepik - Flaticon</a>
+Matcha: <a href="https://www.flaticon.com/free-icons/bubble-tea" title="bubble tea icons">Bubble tea icons created by Freepik - Flaticon</a>
+Taro: <a href="https://www.flaticon.com/free-icons/bubble-tea" title="bubble tea icons">Bubble tea icons created by Freepik - Flaticon</a>
+Slushie: <a href="https://www.flaticon.com/free-icons/bubble-tea" title="bubble tea icons">Bubble tea icons created by Freepik - Flaticon</a>
+Tea: <a href="https://www.flaticon.com/free-icons/bubble-tea" title="bubble tea icons">Bubble tea icons created by Freepik - Flaticon</a>
+Kiwi: <a href="https://www.flaticon.com/free-icons/bubble-tea" title="bubble tea icons">Bubble tea icons created by Freepik - Flaticon</a>
+
+Pattern
+Button1: <a href="https://www.flaticon.com/free-icons/art-and-design" title="art and design icons">Art and design icons created by amonrat rungreangfangsai - Flaticon</a>
+Button2: <a href="https://www.flaticon.com/free-icons/button" title="button icons">Button icons created by amonrat rungreangfangsai - Flaticon</a>
+Button3: <a href="https://www.flaticon.com/free-icons/art-and-design" title="art-and-design icons">Art-and-design icons created by amonrat rungreangfangsai - Flaticon</a>
+Button4: <a href="https://www.flaticon.com/free-icons/art-and-design" title="art-and-design icons">Art-and-design icons created by amonrat rungreangfangsai - Flaticon</a>
+Button5: <a href="https://www.flaticon.com/free-icons/button" title="button icons">Button icons created by amonrat rungreangfangsai - Flaticon</a>
+Fabric Pattern: <a href="https://www.flaticon.com/free-icons/fabric-pattern" title="fabric pattern icons">Fabric pattern icons created by amonrat rungreangfangsai - Flaticon</a>
+Pattern1: <a href="https://www.flaticon.com/free-icons/pattern" title="pattern icons">Pattern icons created by Us and Up - Flaticon</a>
+
