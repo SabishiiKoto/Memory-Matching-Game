@@ -51,7 +51,7 @@
    <bottom>
       <AnchorPane prefHeight="31.0" prefWidth="723.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="labelForError" alignment="CENTER" layoutX="67.0" layoutY="6.0" prefHeight="20.0" prefWidth="686.0">
+            <Label fx:id="labelForError" alignment="CENTER" layoutX="60.0" layoutY="6.0" prefHeight="20.0" prefWidth="686.0">
                <font>
                   <Font size="14.0" />
                </font>
