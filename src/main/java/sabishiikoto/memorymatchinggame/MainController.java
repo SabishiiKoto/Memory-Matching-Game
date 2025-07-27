@@ -1,28 +1,31 @@
 package sabishiikoto.memorymatchinggame;
 
-import java.io.IOException;
 import java.util.*;
-
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
-
 import java.util.ArrayList;
 
 public class MainController {
+
+    @FXML
+    private MenuBar menuBar;
+
+    @FXML
+    private AnchorPane anchorPane;
 
     @FXML
     private Button nextButton;
@@ -31,16 +34,10 @@ public class MainController {
     private GridPane gridPaneForMatching;
 
     @FXML
-    private HBox hBoxGridPane;
-
-    @FXML
     private Label labelForError;
 
     @FXML
-    private ImageView leftSideImage;
-
-    @FXML
-    private ImageView rightSideImage;
+    private Label labelForTitle;
 
     private static final ArrayList<Image> imageList = new ArrayList<>();
     private static Image[][] map = null;
@@ -54,8 +51,48 @@ public class MainController {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("About This Memory Matching Game!");
         alert.setHeaderText("Information and Contact");
-        alert.setContentText("I hope you like this game!\nFor contact, check out my GitHub:\nhttps://github.com/SabishiiKoto");
+        alert.setContentText("I hope you enjoy the game!\nFor contact, check out my GitHub:\nhttps://github.com/SabishiiKoto");
         alert.showAndWait();
+    }
+
+    @FXML
+    void vintageColorTrigger(ActionEvent event) {
+        menuBar.setStyle("-fx-background-color: #F6BD60;");
+        labelForTitle.setStyle("-fx-text-fill: #84A59D;");
+        anchorPane.setStyle("-fx-background-color: #F7EDE2;");
+        labelForError.setStyle("-fx-background-color: #F7EDE2;-fx-text-fill: #F28482;");
+    }
+
+    @FXML
+    void blueColorTrigger(ActionEvent event) {
+        menuBar.setStyle("-fx-background-color: #0196C1;");
+        labelForTitle.setStyle("-fx-text-fill: #046C95;");
+        anchorPane.setStyle("-fx-background-color: #B3E0EE;");
+        labelForError.setStyle("-fx-background-color: #B3E0EE;-fx-text-fill: #083346;");
+    }
+
+    @FXML
+    void greenColorTrigger(ActionEvent event) {
+        menuBar.setStyle("-fx-background-color: #549895;");
+        labelForTitle.setStyle("-fx-text-fill: #387271;");
+        anchorPane.setStyle("-fx-background-color: #8EBCB1;");
+        labelForError.setStyle("-fx-background-color: #8EBCB1;-fx-text-fill: #245254;");
+    }
+
+    @FXML
+    void pinkColorTrigger(ActionEvent event) {
+        menuBar.setStyle("-fx-background-color: #EABEC3;");
+        labelForTitle.setStyle("-fx-text-fill: #DD868C;");
+        anchorPane.setStyle("-fx-background-color: #F5DDE0;");
+        labelForError.setStyle("-fx-background-color: #F5DDE0;-fx-text-fill: #D0637C;");
+    }
+
+    @FXML
+    void blackColorTrigger(ActionEvent event) {
+        menuBar.setStyle("-fx-background-color: #2B2F6C;");
+        labelForTitle.setStyle("-fx-text-fill: #DE978F;");
+        anchorPane.setStyle("-fx-background-color: #564779;");
+        labelForError.setStyle("-fx-background-color: #564779;-fx-text-fill: #DE978F;");
     }
 
     @FXML
@@ -89,6 +126,7 @@ public class MainController {
     @FXML
     void nextTrigger(ActionEvent event) {
         labelForError.setText("");
+        labelForTitle.setText("MEMORY MATCHING!");
         nextButton.setVisible(false);
         gridPaneMapping(level);
     }
@@ -147,7 +185,7 @@ public class MainController {
         floor = new Image(getClass().getResource(pattern).toExternalForm());
         double size;
         if (mode == 4){
-            size = 125;
+            size = 127;
         }
         else if (mode == 6){
             size = 86;
@@ -169,8 +207,6 @@ public class MainController {
                 gridPaneForMatching.add(imageView, column, row);
             }
         }
-//        gridPaneForMatching.setAlignment(Pos.CENTER);
-        hBoxGridPane.setAlignment(Pos.BASELINE_CENTER);
     }
     public class myMouseClickerHandler implements EventHandler {
         private int row;
@@ -207,9 +243,9 @@ public class MainController {
                         previousImage = null;
                         win++;
                         int couple = level*level/2;
-                        labelForError.setText((win) + "/" + couple);
+                        labelForTitle.setText(win + "/" + couple);
                         if (win == couple){
-                            labelForError.setTextFill(Color.STEELBLUE);
+//                            labelForError.setTextFill(Color.STEELBLUE);
                             labelForError.setText("You won, congratulation!!!");
                             nextButton.setVisible(true);
                         }
@@ -250,19 +286,16 @@ public class MainController {
                     imageList.add(image);
                 }
             }
-
-//            String[] patternList = {"pattern.png", "pattern1.png", "pattern2.png"};
-//            Random random = new Random();
-//            int index = random.nextInt(patternList.length);
-//            String pattern = "/Assets/" + patternList[index];
-//            floor = new Image(getClass().getResource(pattern).toExternalForm());
         }
         catch(Exception e){
             e.printStackTrace();
         }
+        menuBar.setStyle("-fx-background-color: #549895;");
+        labelForTitle.setStyle("-fx-text-fill: #387271;");
+        anchorPane.setStyle("-fx-background-color: #8EBCB1;");
+        labelForError.setStyle("-fx-background-color: #8EBCB1;-fx-text-fill: #245254;");
         gridPaneMapping(4);
         nextButton.setVisible(false);
-        labelForError.setTextFill(Color.STEELBLUE);
         labelForError.setText("Hello! To start playing select Mode (top-left corner) and pick a level.");
     }
 }

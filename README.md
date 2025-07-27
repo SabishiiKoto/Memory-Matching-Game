@@ -2,7 +2,7 @@
 A GUI memory matching game.
 
 ## Features
-- Allow player to pick levels.
+- Allow player to pick levels and background colors.
 - Generate games.
 
 ## Technologies Used
@@ -29,7 +29,7 @@ java --module-path "C:\Users\AnhNg\IdeaProjects\openjfx-24_windows-x64_bin-sdk\j
 
 ## What I Learned / Why I Made This
 - Practiced designing GUI using SceneBuilder.
-- Practiced designing with images.
+- Practiced designing with images and colors.
 - Handled errors and bugs.
 
 ## License
