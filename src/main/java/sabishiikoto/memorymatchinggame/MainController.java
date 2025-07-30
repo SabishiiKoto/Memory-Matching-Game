@@ -66,7 +66,12 @@ public class MainController {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("About This Memory Matching Game!");
         alert.setHeaderText("Information and Contact");
-        alert.setContentText("I hope you enjoy the game!\nFor contact, check out my GitHub:\nhttps://github.com/SabishiiKoto");
+        alert.setContentText("I hope you enjoy this game!\nFor contact, check out my GitHub:\nhttps://github.com/SabishiiKoto");
+        Image image = new Image(getClass().getResource("/Assets/Sabii's avatar.jpeg").toExternalForm());
+        ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(70);
+        imageView.setFitHeight(70);
+        alert.setGraphic(imageView);
         alert.showAndWait();
     }
 
