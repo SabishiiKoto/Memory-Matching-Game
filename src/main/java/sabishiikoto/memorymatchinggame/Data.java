@@ -4,6 +4,7 @@ import java.io.*;
 
 public class Data {
     public static int[] highScore = {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE};
+    public static String[] preferredColor = {null, null, null, null};
     public static String updateHighScore(int level, int time){
         if (level == 4 && time < highScore[0]){
             highScore[0] = time;
@@ -64,6 +65,10 @@ public class Data {
                 bufferedWriter.write(time + "\n");
                 bufferedWriter.flush();
             }
+            for (String colorCode : preferredColor){
+                bufferedWriter.write(colorCode + "\n");
+                bufferedWriter.flush();
+            }
             return true;
         }
         catch(IOException e){
@@ -77,9 +82,16 @@ public class Data {
             BufferedReader bufferedWriter = new BufferedReader(new FileReader(file));
             String line = bufferedWriter.readLine();
             int index = 0;
+            int hexIndex = 0;
             while (line != null){
-                highScore[index] = Integer.parseInt(line);
-                index++;
+                if (line.charAt(0) == '-'){
+                    preferredColor[hexIndex] = line;
+                    hexIndex++;
+                }
+                else if (!line.equals("null")) {
+                    highScore[index] = Integer.parseInt(line);
+                    index++;
+                }
                 line = bufferedWriter.readLine();
             }
             return true;
@@ -88,4 +100,15 @@ public class Data {
             return false;
         }
     }
+    public static boolean setPreferredColor (String menuColor, String titleColor, String paneColor, String errorColor){
+        preferredColor[0] = menuColor;
+        preferredColor[1] = titleColor;
+        preferredColor[2] = paneColor;
+        preferredColor[3] = errorColor;
+        return true;
+    }
+    public static String getPreferredColor(int index){
+        return preferredColor[index];
+    }
+
 }

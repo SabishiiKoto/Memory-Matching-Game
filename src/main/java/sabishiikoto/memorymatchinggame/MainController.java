@@ -148,8 +148,11 @@ public class MainController {
 
     @FXML
     void exitTrigger(ActionEvent event) {
+        boolean status = Data.setPreferredColor(menuBar.getStyle(), labelForTitle.getStyle(), anchorPane.getStyle(), labelForError.getStyle());
         Data.saveFile();
-        Platform.exit();
+        if (status) {
+            Platform.exit();
+        }
     }
 
     @FXML
@@ -392,15 +395,27 @@ public class MainController {
 
     @FXML
     void initialize(){
-
-        menuBar.setStyle("-fx-background-color: #549895;");
-        labelForTitle.setStyle("-fx-text-fill: #387271;");
-        anchorPane.setStyle("-fx-background-color: #8EBCB1;");
-        labelForError.setStyle("-fx-background-color: #8EBCB1;-fx-text-fill: #245254;");
-        labelForColorTime.setStyle("-fx-text-fill: #387271;");
-        labelForTime.setStyle("-fx-text-fill: #387271;");
-        labelForColorFastest.setStyle("-fx-text-fill: #387271;");
-        labelForFastest.setStyle("-fx-text-fill: #387271;");
+        Data.loadFile();
+        if (Data.preferredColor[0] != null){
+            menuBar.setStyle(Data.getPreferredColor(0));
+            labelForTitle.setStyle(Data.getPreferredColor(1));
+            anchorPane.setStyle(Data.getPreferredColor(2));
+            labelForError.setStyle(Data.getPreferredColor(3));
+            labelForColorTime.setStyle(Data.getPreferredColor(1));
+            labelForTime.setStyle(Data.getPreferredColor(1));
+            labelForColorFastest.setStyle(Data.getPreferredColor(1));
+            labelForFastest.setStyle(Data.getPreferredColor(1));
+        }
+        else {
+            menuBar.setStyle("-fx-background-color: #549895;");
+            labelForTitle.setStyle("-fx-text-fill: #387271;");
+            anchorPane.setStyle("-fx-background-color: #8EBCB1;");
+            labelForError.setStyle("-fx-background-color: #8EBCB1;-fx-text-fill: #245254;");
+            labelForColorTime.setStyle("-fx-text-fill: #387271;");
+            labelForTime.setStyle("-fx-text-fill: #387271;");
+            labelForColorFastest.setStyle("-fx-text-fill: #387271;");
+            labelForFastest.setStyle("-fx-text-fill: #387271;");
+        }
 
         // Create the image list
         try {
@@ -415,7 +430,6 @@ public class MainController {
         catch(Exception e){
             labelForError.setText("Something is wrong!");
         }
-        Data.loadFile();
         gridPaneMapping(4);
         nextButton.setVisible(false);
         labelForError.setText("Hello! To start playing select Mode (top-left corner) and pick a level.");

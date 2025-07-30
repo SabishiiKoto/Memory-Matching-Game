@@ -4,7 +4,8 @@ A GUI memory matching game.
 ## Features
 - Allow player to pick levels and background colors.
 - Generate games.
-- Count time and save the fastest records.
+- Count time.
+- Save the fastest records and last used color theme.
 
 ## Technologies Used
 - Language: Java
