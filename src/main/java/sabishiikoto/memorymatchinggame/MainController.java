@@ -190,7 +190,6 @@ public class MainController {
         else{
             time = true;
             labelForError.setText("Time is enabled!");
-//            menuTime.setText("Disable Time");
             gridPaneMapping(level);
         }
     }
@@ -239,6 +238,7 @@ public class MainController {
 
         // Set title
         labelForTitle.setText("MEMORY MATCHING!");
+
         // Set the default time if it's enabled.
         if (time) {
             firstClick = false; // Start counting time when firstClick is true
@@ -262,6 +262,7 @@ public class MainController {
         else{
             labelForFastest.setText("No record");
         }
+
         // Set the next button
         nextButton.setVisible(false);
 
