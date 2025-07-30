@@ -10,10 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuBar;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
@@ -25,6 +22,9 @@ public class MainController {
 
     @FXML
     private MenuBar menuBar;
+
+    @FXML
+    private MenuItem menuTime;
 
     @FXML
     private AnchorPane anchorPane;
@@ -61,6 +61,7 @@ public class MainController {
     private int win;
     private int level;
     private boolean firstClick;
+    private boolean time = true;
     @FXML
     void aboutTrigger(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -148,11 +149,10 @@ public class MainController {
 
     @FXML
     void exitTrigger(ActionEvent event) {
-        boolean status = Data.setPreferredColor(menuBar.getStyle(), labelForTitle.getStyle(), anchorPane.getStyle(), labelForError.getStyle());
+        Data.setPreferredColor(menuBar.getStyle(), labelForTitle.getStyle(), anchorPane.getStyle(), labelForError.getStyle());
+        Data.setTime(time);
         Data.saveFile();
-        if (status) {
-            Platform.exit();
-        }
+        Platform.exit();
     }
 
     @FXML
@@ -175,11 +175,25 @@ public class MainController {
     @FXML
     void nextTrigger(ActionEvent event) {
         labelForError.setText("");
-        labelForTitle.setText("MEMORY MATCHING!");
         nextButton.setVisible(false);
         gridPaneMapping(level);
     }
 
+    @FXML
+    void timeTrigger(ActionEvent event){
+        if (time){
+            time = false;
+            labelForError.setText("Time is disabled!");
+
+            gridPaneMapping(level);
+        }
+        else{
+            time = true;
+            labelForError.setText("Time is enabled!");
+//            menuTime.setText("Disable Time");
+            gridPaneMapping(level);
+        }
+    }
 
     public static ArrayList<Image> createTempList(){
         ArrayList<Image> tempList = new ArrayList<>();
@@ -223,12 +237,24 @@ public class MainController {
         win = 0;
         level = mode;
 
-        // Set the default time
-        firstClick = false; // Start counting time when firstClick is true
-        labelForTime.setText("00:00");
-        timee = 0;
+        // Set title
+        labelForTitle.setText("MEMORY MATCHING!");
+        // Set the default time if it's enabled.
+        if (time) {
+            firstClick = false; // Start counting time when firstClick is true
+            labelForTime.setText("00:00");
+            timee = 0;
+            menuTime.setText("Disable Time");
+        }
+        else{
+            menuTime.setText("Enable Time");
+        }
+        labelForColorTime.setVisible(time);
+        labelForTime.setVisible(time);
+        labelForColorFastest.setVisible(time);
+        labelForFastest.setVisible(time);
 
-        // Set fastest record
+        // Display the fastest record
         String time = Data.getHighScore(level);
         if (time != null){
             labelForFastest.setText(time);
@@ -330,6 +356,9 @@ public class MainController {
                                     labelForTitle.setText(win + "/" + couple);
                                     if (win == couple){
                                         nextButton.setVisible(true);
+                                        if (!time){
+                                            labelForError.setText("You won, congrats!!!");
+                                        }
                                     }
                                 }
                             }
@@ -377,26 +406,31 @@ public class MainController {
 
             String format = String.format("%02d:%02d", minutes, seconds);
             labelForTime.setText(format);
-            if (win >= level*level/2){
+            if (win >= level * level / 2) {
                 String newHighScore = Data.updateHighScore(level, timee);
-                if (newHighScore !=null){
+                if (newHighScore != null) {
                     labelForFastest.setText(newHighScore);
                     labelForError.setText("Congratulations! You made a new record.");
                 }
-                else{
+                else {
                     labelForError.setText("You won, congrats!!!");
                 }
                 timeline.stop();
             }
+            else if (!time){
+                timeline.stop();
+            }
         }));
         timeline.setCycleCount(Timeline.INDEFINITE);
-        timeline.play();
+        if (time){
+            timeline.play();
+        }
     }
 
     @FXML
     void initialize(){
         Data.loadFile();
-        if (Data.preferredColor[0] != null){
+        if (Data.getPreferredColor(0) != null){
             menuBar.setStyle(Data.getPreferredColor(0));
             labelForTitle.setStyle(Data.getPreferredColor(1));
             anchorPane.setStyle(Data.getPreferredColor(2));
@@ -416,6 +450,7 @@ public class MainController {
             labelForColorFastest.setStyle("-fx-text-fill: #387271;");
             labelForFastest.setStyle("-fx-text-fill: #387271;");
         }
+        time = Data.getTime();
 
         // Create the image list
         try {

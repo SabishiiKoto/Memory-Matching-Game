@@ -3,8 +3,9 @@ package sabishiikoto.memorymatchinggame;
 import java.io.*;
 
 public class Data {
-    public static int[] highScore = {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE};
-    public static String[] preferredColor = {null, null, null, null};
+    private static int[] highScore = {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE};
+    private static String[] preferredColor = {null, null, null, null};
+    private static boolean time = true;
     public static String updateHighScore(int level, int time){
         if (level == 4 && time < highScore[0]){
             highScore[0] = time;
@@ -69,6 +70,8 @@ public class Data {
                 bufferedWriter.write(colorCode + "\n");
                 bufferedWriter.flush();
             }
+            bufferedWriter.write(time + "\n");
+            bufferedWriter.flush();
             return true;
         }
         catch(IOException e){
@@ -89,8 +92,16 @@ public class Data {
                     hexIndex++;
                 }
                 else if (!line.equals("null")) {
-                    highScore[index] = Integer.parseInt(line);
-                    index++;
+                    if (line.equals("true")){
+                        time = true;
+                    }
+                    else if (line.equals("false")){
+                        time = false;
+                    }
+                    else {
+                        highScore[index] = Integer.parseInt(line);
+                        index++;
+                    }
                 }
                 line = bufferedWriter.readLine();
             }
@@ -111,4 +122,11 @@ public class Data {
         return preferredColor[index];
     }
 
+    public static boolean setTime(boolean status){
+        time = status;
+        return true;
+    }
+    public static boolean getTime(){
+        return time;
+    }
 }

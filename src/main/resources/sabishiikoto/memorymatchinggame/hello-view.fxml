@@ -85,6 +85,11 @@
                   <MenuItem mnemonicParsing="false" onAction="#blackColorTrigger" text="Dark" />
               </items>
             </Menu>
+            <Menu mnemonicParsing="false" text="Time">
+              <items>
+                  <MenuItem fx:id="menuTime" mnemonicParsing="false" onAction="#timeTrigger" text="Disable Time" />
+              </items>
+            </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#aboutTrigger" text="About" />
