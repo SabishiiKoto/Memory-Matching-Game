@@ -4,6 +4,7 @@ A GUI memory matching game.
 ## Features
 - Allow player to pick levels and background colors.
 - Generate games.
+- Count time and save the fastest records.
 
 ## Technologies Used
 - Language: Java
@@ -31,6 +32,7 @@ java --module-path "C:\Users\AnhNg\IdeaProjects\openjfx-24_windows-x64_bin-sdk\j
 - Practiced designing GUI using SceneBuilder.
 - Practiced designing with images and colors.
 - Handled errors and bugs.
+- First time using time related libraries.
 
 ## License
 - This project is for learning purposes only.

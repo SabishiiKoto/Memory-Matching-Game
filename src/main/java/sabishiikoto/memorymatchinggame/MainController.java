@@ -1,7 +1,10 @@
 package sabishiikoto.memorymatchinggame;
 
 import java.util.*;
+
+import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -15,8 +18,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
 import javafx.util.Duration;
+
 import java.util.ArrayList;
 
 public class MainController {
@@ -39,6 +42,18 @@ public class MainController {
     @FXML
     private Label labelForTitle;
 
+    @FXML
+    private Label labelForColorTime;
+
+    @FXML
+    private Label labelForTime;
+
+    @FXML
+    private Label labelForColorFastest;
+
+    @FXML
+    private Label labelForFastest;
+
     private static final ArrayList<Image> imageList = new ArrayList<>();
     private static Image[][] map = null;
 
@@ -46,6 +61,7 @@ public class MainController {
     private myMouseClickerHandler previousImage = null;
     private int win;
     private int level;
+    private boolean firstClick;
     @FXML
     void aboutTrigger(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -61,6 +77,11 @@ public class MainController {
         labelForTitle.setStyle("-fx-text-fill: #84A59D;");
         anchorPane.setStyle("-fx-background-color: #F7EDE2;");
         labelForError.setStyle("-fx-background-color: #F7EDE2;-fx-text-fill: #F28482;");
+
+        labelForColorTime.setStyle("-fx-text-fill: #84A59D;");
+        labelForTime.setStyle("-fx-text-fill: #84A59D;");
+        labelForColorFastest.setStyle("-fx-text-fill: #84A59D;");
+        labelForFastest.setStyle("-fx-text-fill: #84A59D;");
     }
 
     @FXML
@@ -69,6 +90,11 @@ public class MainController {
         labelForTitle.setStyle("-fx-text-fill: #046C95;");
         anchorPane.setStyle("-fx-background-color: #B3E0EE;");
         labelForError.setStyle("-fx-background-color: #B3E0EE;-fx-text-fill: #083346;");
+
+        labelForColorTime.setStyle("-fx-text-fill: #046C95;");
+        labelForTime.setStyle("-fx-text-fill: #046C95;");
+        labelForColorFastest.setStyle("-fx-text-fill: #046C95;");
+        labelForFastest.setStyle("-fx-text-fill: #046C95;");
     }
 
     @FXML
@@ -77,6 +103,11 @@ public class MainController {
         labelForTitle.setStyle("-fx-text-fill: #387271;");
         anchorPane.setStyle("-fx-background-color: #8EBCB1;");
         labelForError.setStyle("-fx-background-color: #8EBCB1;-fx-text-fill: #245254;");
+
+        labelForColorTime.setStyle("-fx-text-fill: #387271;");
+        labelForTime.setStyle("-fx-text-fill: #387271;");
+        labelForColorFastest.setStyle("-fx-text-fill: #387271;");
+        labelForFastest.setStyle("-fx-text-fill: #387271;");
     }
 
     @FXML
@@ -85,6 +116,11 @@ public class MainController {
         labelForTitle.setStyle("-fx-text-fill: #DD868C;");
         anchorPane.setStyle("-fx-background-color: #F5DDE0;");
         labelForError.setStyle("-fx-background-color: #F5DDE0;-fx-text-fill: #D0637C;");
+
+        labelForColorTime.setStyle("-fx-text-fill: #DD868C;");
+        labelForTime.setStyle("-fx-text-fill: #DD868C;");
+        labelForColorFastest.setStyle("-fx-text-fill: #DD868C;");
+        labelForFastest.setStyle("-fx-text-fill: #DD868C;");
     }
 
     @FXML
@@ -93,6 +129,11 @@ public class MainController {
         labelForTitle.setStyle("-fx-text-fill: #DE978F;");
         anchorPane.setStyle("-fx-background-color: #564779;");
         labelForError.setStyle("-fx-background-color: #564779;-fx-text-fill: #DE978F;");
+
+        labelForColorTime.setStyle("-fx-text-fill: #DE978F;");
+        labelForTime.setStyle("-fx-text-fill: #DE978F;");
+        labelForColorFastest.setStyle("-fx-text-fill: #DE978F;");
+        labelForFastest.setStyle("-fx-text-fill: #DE978F;");
     }
 
     @FXML
@@ -103,6 +144,7 @@ public class MainController {
 
     @FXML
     void exitTrigger(ActionEvent event) {
+        Data.saveFile();
         Platform.exit();
     }
 
@@ -173,16 +215,39 @@ public class MainController {
     void gridPaneMapping(int mode){
         win = 0;
         level = mode;
+
+        // Set the default time
+        firstClick = false; // Start counting time when firstClick is true
+        labelForTime.setText("00:00");
+        timee = 0;
+
+        // Set fastest record
+        String time = Data.getHighScore(level);
+        if (time != null){
+            labelForFastest.setText(time);
+        }
+        else{
+            labelForFastest.setText("No record");
+        }
+        // Set the next button
         nextButton.setVisible(false);
+
+        // Reset the gridPane
         gridPaneForMatching.getColumnConstraints().clear();
         gridPaneForMatching.getRowConstraints().clear();
         gridPaneForMatching.getChildren().clear();
+
+        // Create a map
         ArrayList<Image> modeList = modeImageList(mode);
         map = imageMapSetUp(modeList, mode);
+
+        // Pick a random card pattern
         Random random = new Random();
         int index = random.nextInt(patternList.length);
         String pattern = "/Assets/" + patternList[index];
         floor = new Image(getClass().getResource(pattern).toExternalForm());
+
+        // Set the size of the card depending on the level
         double size;
         if (mode == 4){
             size = 127;
@@ -196,6 +261,8 @@ public class MainController {
         else{
             size = 52;
         }
+
+        // Create imageView to put inside the gridPane and assign click handler
         for (int row = 0; row < mode; row++){
             for (int column = 0; column < mode; column++){
                 ImageView imageView = new ImageView(floor);
@@ -226,6 +293,10 @@ public class MainController {
         }
         @Override
         public void handle(Event event) {
+            if (!firstClick){
+                firstClick = true;
+                timer();
+            }
             if (previousImage != null) {
                 if (this.row == previousImage.getRow() && this.column == previousImage.getColumn()) {
                     if (this.imageView.getImage().equals(floor)) {
@@ -251,14 +322,12 @@ public class MainController {
                                     int couple = level*level/2;
                                     labelForTitle.setText(win + "/" + couple);
                                     if (win == couple){
-//                            labelForError.setTextFill(Color.STEELBLUE);
-                                        labelForError.setText("You won, congratulation!!!");
                                         nextButton.setVisible(true);
                                     }
                                 }
                             }
                             catch(Exception error){
-
+                                labelForError.setText("Please slow down!");
                             }
                         });
                         pause.play();
@@ -275,7 +344,7 @@ public class MainController {
                                     }
                                 }
                                 catch(Exception error){
-
+                                    labelForError.setText("Please slow down!");
                                 }
                             });
                             pause.play();
@@ -289,8 +358,46 @@ public class MainController {
         }
     }
 
+    public int timee = 0;
+
+    // Copilot's help
+    public void timer (){
+        Timeline timeline = new Timeline();
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(1), e -> {
+            timee++;
+            int minutes = timee / 60;
+            int seconds = timee % 60;
+
+            String format = String.format("%02d:%02d", minutes, seconds);
+            labelForTime.setText(format);
+            if (win >= level*level/2){
+                String newHighScore = Data.updateHighScore(level, timee);
+                if (newHighScore !=null){
+                    labelForFastest.setText(newHighScore);
+                    labelForError.setText("Congratulations! You made a new record.");
+                }
+                else{
+                    labelForError.setText("You won, congrats!!!");
+                }
+                timeline.stop();
+            }
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+    }
+
     @FXML
     void initialize(){
+
+        menuBar.setStyle("-fx-background-color: #549895;");
+        labelForTitle.setStyle("-fx-text-fill: #387271;");
+        anchorPane.setStyle("-fx-background-color: #8EBCB1;");
+        labelForError.setStyle("-fx-background-color: #8EBCB1;-fx-text-fill: #245254;");
+        labelForColorTime.setStyle("-fx-text-fill: #387271;");
+        labelForTime.setStyle("-fx-text-fill: #387271;");
+        labelForColorFastest.setStyle("-fx-text-fill: #387271;");
+        labelForFastest.setStyle("-fx-text-fill: #387271;");
+
         // Create the image list
         try {
             for (int group = 1; group < 11; group++) {
@@ -302,12 +409,9 @@ public class MainController {
             }
         }
         catch(Exception e){
-            e.printStackTrace();
+            labelForError.setText("Something is wrong!");
         }
-        menuBar.setStyle("-fx-background-color: #549895;");
-        labelForTitle.setStyle("-fx-text-fill: #387271;");
-        anchorPane.setStyle("-fx-background-color: #8EBCB1;");
-        labelForError.setStyle("-fx-background-color: #8EBCB1;-fx-text-fill: #245254;");
+        Data.loadFile();
         gridPaneMapping(4);
         nextButton.setVisible(false);
         labelForError.setText("Hello! To start playing select Mode (top-left corner) and pick a level.");
