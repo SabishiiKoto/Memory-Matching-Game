@@ -238,17 +238,31 @@ public class MainController {
                 } else {
                     this.imageView.setImage(map[row][column]);
                     if (previousImage.imageView.getImage().equals(this.imageView.getImage())) {
-                        previousImage.imageView.setOnMouseClicked(null);
-                        this.imageView.setOnMouseClicked(null);
-                        previousImage = null;
-                        win++;
-                        int couple = level*level/2;
-                        labelForTitle.setText(win + "/" + couple);
-                        if (win == couple){
+                        PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
+                        pause.setOnFinished(e -> {
+                            try{
+                                if (previousImage.imageView != null) {
+                                    previousImage.imageView.setImage(null);
+                                    this.imageView.setImage(null);
+                                    previousImage.imageView.setOnMouseClicked(null);
+                                    this.imageView.setOnMouseClicked(null);
+                                    previousImage = null;
+                                    win++;
+                                    int couple = level*level/2;
+                                    labelForTitle.setText(win + "/" + couple);
+                                    if (win == couple){
 //                            labelForError.setTextFill(Color.STEELBLUE);
-                            labelForError.setText("You won, congratulation!!!");
-                            nextButton.setVisible(true);
-                        }
+                                        labelForError.setText("You won, congratulation!!!");
+                                        nextButton.setVisible(true);
+                                    }
+                                }
+                            }
+                            catch(Exception error){
+
+                            }
+                        });
+                        pause.play();
+
                     } else {
                         // Copilot helped with the timing thing.
                             PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
