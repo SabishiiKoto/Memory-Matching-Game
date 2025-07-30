@@ -128,3 +128,5 @@ Button5: <a href="https://www.flaticon.com/free-icons/button" title="button icon
 Fabric Pattern: <a href="https://www.flaticon.com/free-icons/fabric-pattern" title="fabric pattern icons">Fabric pattern icons created by amonrat rungreangfangsai - Flaticon</a>
 Pattern1: <a href="https://www.flaticon.com/free-icons/pattern" title="pattern icons">Pattern icons created by Us and Up - Flaticon</a>
 
+Window avatar: <a href="https://www.flaticon.com/free-icons/tarot" title="tarot icons">Tarot icons created by Freepik - Flaticon</a>
+
