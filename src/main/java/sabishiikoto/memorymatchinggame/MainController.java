@@ -87,6 +87,8 @@ public class MainController {
         labelForTime.setStyle("-fx-text-fill: #84A59D;");
         labelForColorFastest.setStyle("-fx-text-fill: #84A59D;");
         labelForFastest.setStyle("-fx-text-fill: #84A59D;");
+
+        nextButton.setStyle("-fx-background-color: #F6BD60; -fx-text-fill: #F7EDE2;");
     }
 
     @FXML
@@ -100,6 +102,9 @@ public class MainController {
         labelForTime.setStyle("-fx-text-fill: #046C95;");
         labelForColorFastest.setStyle("-fx-text-fill: #046C95;");
         labelForFastest.setStyle("-fx-text-fill: #046C95;");
+
+        nextButton.setStyle("-fx-background-color: #0196C1; -fx-text-fill: #B3E0EE;");
+
     }
 
     @FXML
@@ -113,6 +118,9 @@ public class MainController {
         labelForTime.setStyle("-fx-text-fill: #387271;");
         labelForColorFastest.setStyle("-fx-text-fill: #387271;");
         labelForFastest.setStyle("-fx-text-fill: #387271;");
+
+        nextButton.setStyle("-fx-background-color: #549895; -fx-text-fill: #8EBCB1;");
+
     }
 
     @FXML
@@ -126,6 +134,9 @@ public class MainController {
         labelForTime.setStyle("-fx-text-fill: #DD868C;");
         labelForColorFastest.setStyle("-fx-text-fill: #DD868C;");
         labelForFastest.setStyle("-fx-text-fill: #DD868C;");
+
+        nextButton.setStyle("-fx-background-color: #EABEC3; -fx-text-fill: #F5DDE0;");
+
     }
 
     @FXML
@@ -139,6 +150,9 @@ public class MainController {
         labelForTime.setStyle("-fx-text-fill: #DE978F;");
         labelForColorFastest.setStyle("-fx-text-fill: #DE978F;");
         labelForFastest.setStyle("-fx-text-fill: #DE978F;");
+
+        nextButton.setStyle("-fx-background-color: #2B2F6C; -fx-text-fill: #564779;");
+
     }
 
     @FXML
@@ -149,7 +163,7 @@ public class MainController {
 
     @FXML
     void exitTrigger(ActionEvent event) {
-        Data.setPreferredColor(menuBar.getStyle(), labelForTitle.getStyle(), anchorPane.getStyle(), labelForError.getStyle());
+        Data.setPreferredColor(menuBar.getStyle(), labelForTitle.getStyle(), anchorPane.getStyle(), labelForError.getStyle(), nextButton.getStyle());
         Data.setTime(time);
         Data.saveFile();
         Platform.exit();
@@ -440,16 +454,21 @@ public class MainController {
             labelForTime.setStyle(Data.getPreferredColor(1));
             labelForColorFastest.setStyle(Data.getPreferredColor(1));
             labelForFastest.setStyle(Data.getPreferredColor(1));
+            nextButton.setStyle(Data.getPreferredColor(4));
+
         }
         else {
             menuBar.setStyle("-fx-background-color: #549895;");
             labelForTitle.setStyle("-fx-text-fill: #387271;");
             anchorPane.setStyle("-fx-background-color: #8EBCB1;");
             labelForError.setStyle("-fx-background-color: #8EBCB1;-fx-text-fill: #245254;");
+
             labelForColorTime.setStyle("-fx-text-fill: #387271;");
             labelForTime.setStyle("-fx-text-fill: #387271;");
             labelForColorFastest.setStyle("-fx-text-fill: #387271;");
             labelForFastest.setStyle("-fx-text-fill: #387271;");
+
+            nextButton.setStyle("-fx-background-color: #549895; -fx-text-fill: #8EBCB1;");
         }
         time = Data.getTime();
 

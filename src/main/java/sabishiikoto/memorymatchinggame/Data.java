@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Data {
     private static int[] highScore = {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE};
-    private static String[] preferredColor = {null, null, null, null};
+    private static String[] preferredColor = {null, null, null, null, null};
     private static boolean time = true;
     public static String updateHighScore(int level, int time){
         if (level == 4 && time < highScore[0]){
@@ -111,11 +111,12 @@ public class Data {
             return false;
         }
     }
-    public static boolean setPreferredColor (String menuColor, String titleColor, String paneColor, String errorColor){
+    public static boolean setPreferredColor (String menuColor, String titleColor, String paneColor, String errorColor, String nextButton){
         preferredColor[0] = menuColor;
         preferredColor[1] = titleColor;
         preferredColor[2] = paneColor;
         preferredColor[3] = errorColor;
+        preferredColor[4] = nextButton;
         return true;
     }
     public static String getPreferredColor(int index){
