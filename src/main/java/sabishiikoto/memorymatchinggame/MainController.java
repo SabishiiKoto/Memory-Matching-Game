@@ -56,7 +56,7 @@ public class MainController {
     private static final ArrayList<Image> imageList = new ArrayList<>();
     private static Image[][] map = null;
 
-    private static final String[] patternList = {"pattern.png", "pattern1.png", "pattern2.png", "pattern3.png", "pattern4.png","pattern5.png", "pattern6.png"};
+    private static final String[] patternList = {"pattern1.png", "pattern2.png", "pattern3.png", "pattern4.png","pattern5.png", "pattern6.png"};
     private myMouseClickerHandler previousImage = null;
     private int win;
     private int level;
