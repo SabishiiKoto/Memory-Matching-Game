@@ -76,12 +76,12 @@
                   <MenuItem mnemonicParsing="false" onAction="#expertTrigger" text="Expert" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Background">
+            <Menu mnemonicParsing="false" text="Theme">
               <items>
                   <MenuItem mnemonicParsing="false" onAction="#blueColorTrigger" text="Blue" />
-                <MenuItem mnemonicParsing="false" onAction="#vintageColorTrigger" text="Vintage" />
                   <MenuItem mnemonicParsing="false" onAction="#pinkColorTrigger" text="Pink" />
                   <MenuItem mnemonicParsing="false" onAction="#greenColorTrigger" text="Green" />
+                <MenuItem mnemonicParsing="false" onAction="#vintageColorTrigger" text="Vintage" />
                   <MenuItem mnemonicParsing="false" onAction="#blackColorTrigger" text="Dark" />
               </items>
             </Menu>
