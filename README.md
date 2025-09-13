@@ -7,6 +7,11 @@ A GUI memory matching game.
 - Count time.
 - Save the fastest records and last used color theme.
 
+<p align="left">
+    <img src = "https://github.com/SabishiiKoto/Memory-Matching-Game/blob/master/src/main/resources/Assets/Screenshot%202025-09-13%20124544.png?raw=true" width = "300" height="250">
+    <img src = "https://github.com/SabishiiKoto/Memory-Matching-Game/blob/master/src/main/resources/Assets/Screenshot%202025-09-13%20124630.png?raw=true" width = "300" height="250">
+</p>
+
 ## Technologies Used
 - Language: Java
 - GUI Library: JavaFX, SceneBuilder
