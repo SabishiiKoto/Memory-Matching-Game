@@ -62,7 +62,7 @@ public class MainController {
     private int level;
     private boolean firstClick;
     private boolean time = true;
-
+    private Timeline timeline = null;
 
     @FXML
     void aboutTrigger(ActionEvent event) {
@@ -197,6 +197,9 @@ public class MainController {
 
     @FXML
     void timeTrigger(ActionEvent event){
+        if (timeline != null){
+            timeline.stop();
+        }
         if (time){
             time = false;
             labelForError.setText("Time is disabled!");
@@ -257,6 +260,9 @@ public class MainController {
 
         // Set the default time if it's enabled.
         if (time) {
+            if (timeline != null){
+                timeline.stop();
+            }
             firstClick = false; // Start counting time when firstClick is true
             labelForTime.setText("00:00");
             timee = 0;
@@ -415,7 +421,10 @@ public class MainController {
 
     // Copilot's help
     public void timer (){
-        Timeline timeline = new Timeline();
+        if (timeline != null){
+            timeline.stop(); // Stop existing stopwatch
+        }
+        timeline = new Timeline();
         timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(1), e -> {
             timee++;
             int minutes = timee / 60;
