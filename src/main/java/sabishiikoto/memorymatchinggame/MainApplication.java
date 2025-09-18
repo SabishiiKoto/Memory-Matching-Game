@@ -17,6 +17,7 @@ public class MainApplication extends Application {
         stage.setScene(scene);
         String avatar = "/Assets/avatar.png";
         stage.getIcons().add(new Image(getClass().getResource(avatar).toExternalForm()));
+        stage.setResizable(false);
         stage.show();
     }
 
